@@ -1,3 +1,7 @@
+build/
+CMakeLists.txt.user
+.vscode/
+
 # Prerequisites
 *.d
 
@@ -15,6 +19,7 @@
 *.so
 *.dylib
 *.dll
+.DS_Store
 
 # Fortran module files
 *.mod
