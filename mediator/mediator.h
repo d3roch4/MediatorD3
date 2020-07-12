@@ -37,6 +37,15 @@ public:
     }
 };
 
+template<class ExecutorT_, class ResultT_ = void>
+struct Command
+{
+    //static_assert(std::is_base_of(Executor, ExecutorT_), "ExceutorT is not base of d3::mediator::Excecutor");
+
+    typedef ExecutorT_ ExecutorT;
+    typedef ResultT_ ResultT;
+};
+
 }
 }
 #endif // MEDIATOR_H
