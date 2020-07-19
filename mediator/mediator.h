@@ -31,7 +31,7 @@ public:
 			throw runtime_error("Executor not found, register this executor with 'Mediator::executor'");
 	}
 
-    template<class C> typename C::ResultT exec(C&& command)
+    template<class C> inline typename C::ResultT exec(C&& command)
     {
         return this->exec(command);
     }
