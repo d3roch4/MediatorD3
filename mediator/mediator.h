@@ -26,7 +26,7 @@ public:
 	{
 		auto itr = mapExecutor.find(typeid( typename C::ExecutorT ));
         if (itr != mapExecutor.end()){
-            return command.exec(itr->second);
+            return command.exec( (typename C::ExecutorT*) itr->second);
         }else
 			throw runtime_error("Executor not found, register this executor with 'Mediator::executor'");
 	}
