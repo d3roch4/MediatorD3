@@ -9,7 +9,7 @@ include_directories(./)
 
 file(GLOB CPP_FILES mediator/*/*.cpp mediator/*.cpp)
 file(GLOB HPP_FILES mediator/*/*.h mediator/*.h)
-add_library(${PROJECT_NAME} ${CPP_FILES} ${HPP_FILES})
+add_library(${PROJECT_NAME} STATIC ${CPP_FILES} ${HPP_FILES})
 target_include_directories(${PROJECT_NAME} PUBLIC ./)
 
 if(BUILD_EXAMPLE)
